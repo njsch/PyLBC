@@ -9,7 +9,10 @@ GNU Lesser General Public License (LGPL)
 import ctypes, os, sys
 import win32api
 import wx
-from odict import OrderedDict
+try:
+	from odict import OrderedDict
+except:
+	from odict import odict as OrderedDict
 
 DEFAULT_PARENT = -1
 DEFAULT_STYLE = 0
