@@ -1,7 +1,9 @@
-Also available from the archive at
-http://EmpowermentZone.com/pyLbc.zip
-
 Layout by Code for Python
+
+Updated version 2.0
+11 June 2020
+Copyright 2020 by Nathaniel Schmidt
+
 Version 1.5
 October 18, 2015
 Copyright 2009 - 2015 by Jamal Mazrui
@@ -15,11 +17,11 @@ http://EmpowermentZone.com/appsetup.exe
 
 Although the Python version is not as flexible, it is still intended to support most dialogs one might need (based on years of experience with various applications and languages).  It should work with Python versions 2.4 through 2.7.  It depends on the following 3rd-party Python modules:
 
-wxPython (2.8 or 2.9)
+wxPython (2.8 or 2.9), or if using python 3, PyLBC has been tested with WxPython 4.1.0
 http://wxpython.org
 
-py2exe
-http://py2exe.org
+PyInstaller
+http://pyinstaller.org
 
 Python for Windows extensions
 http://sourceforge.net/projects/pywin32/
@@ -27,7 +29,9 @@ http://sourceforge.net/projects/pywin32/
 odict -- an ordered dictionary
 http://www.voidspace.org.uk/python/odict.html
 
-The py2exe module is only needed if one wants to create a Windows executable like lbc_fruit.exe.  The batch file run_setup_lbc_fruit.bat does this, using setup_lbc_fruit.py to specify how the executable is built.
+All of these modules and packages can be easily installed to the relevant Python installation via PIP.
+
+The PyInstaller module is only needed if one wants to create a Windows executable like lbc_fruit.exe.  To create a stand-alone executable GUI application, just type pyinstaller lbc_fruit.py as an example.  This is assuming you have set your path environment variable correctly for %python_home%\scripts, where %python_home% is the location of your Python installation.  For Windows versions greater than XP, this will probably be something like either C:\python37, for example, where the number is the version of python.  Or it might be something like C:\Program Files\Python37, or C:\Program Files (x86)\python37-32.
 
 After instantiating an lbc dialog object, any of the following controls may be added with a line of code:  Button, CheckBox, ListBox, RadioButton, RichEdit, StaticText, or TextCtrl.  The control is added to a horizontal band of controls, with layout automatically managed by wxSizer containers.  Adding a new band is analagous to pressing carriage return at the end of a line.  
 
