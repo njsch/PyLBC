@@ -35,5 +35,5 @@ dlg = lbc.Dialog(title='Fruit Basket')
 dlg.AddTextCtrl(label='Fruit')
 dlg.AddListBox(label='Basket')
 dlg.Complete(buttons=['Add', 'Delete'], handler=OnEvent)
-app.Exit()
+app.Destroy()
 
